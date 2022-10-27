@@ -1,2 +1,2 @@
 # GOLang
-Repositorio de practicas con go
+Repositorie to practice with go
