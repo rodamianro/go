@@ -1,2 +1,7 @@
 # GOLang
-Repositorio de practicas con go
+Repositorie to practice with go
+
+To execute the code uses
+```sh
+go run hellow.world.go
+```
