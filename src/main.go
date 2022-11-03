@@ -111,4 +111,71 @@ func main() {
 	const circleRadius = 5                                                                 // Circle's radius
 	var ciclesArea = math.Pi * (math.Pow(circleRadius, 2))                                 // Calculates circule's area
 	fmt.Println("\t4. Circle's area (math.Pi * (math.Pow(circleRadius, 2))):", ciclesArea) // Prints result calculates
+	fmt.Println("")
+
+	// Primitive values
+	// Defining the value type improves performance
+	fmt.Println("Primitive values")
+
+	// Integer numbers
+	fmt.Println(" Integer numbers")
+	// int = OS depending (32 o 64)
+	const integer int = 9223372036854775807
+	fmt.Println("\tInteger that has OS depends (const integer int = 9223372036854775807):", integer)
+	// int8 = 8 bits = -2^7 a 2^7 - 1 (-128 a 127)
+	const integer8 int8 = 127
+	fmt.Println("\tInteger that is equivalent to 8 bits (const integer8 int8 = 127):", integer8)
+	// int16 = 16 bits = -2^15 a 2^15 - 1 (-32768 a 32767)
+	const integer16 int16 = -32768
+	fmt.Println("\tInteger that is equivalent to 16 bits (const integer16 int16 = -32768):", integer16)
+	// int32 = 32 bits = -2^31 a 2^31 - 1 (-2147483648 a 2147483647)
+	const integer32 int32 = 2147483647
+	fmt.Println("\tInteger that is equivalent to 32 bits (const integer32 int32 = 2147483647):", integer32)
+	// int64 = 64 bits = -2^63 a 2^63 - 1 (-9223372036854775808 a 9223372036854775807)
+	const integer64 int64 = -9223372036854775808
+	fmt.Println("\tInteger that is equivalent to 64 bits (const integer64 int64 = -9223372036854775808):", integer64)
+
+	// Positive integer numbers
+	fmt.Println(" Positive integer numbers")
+	// uint = OS depending (32 o 64)
+	const positiveInteger uint = 18446744073709551615
+	fmt.Println("\tPositive integer that has OS dependes (const positiveInteger uint = 18446744073709551615):", positiveInteger)
+	// uint8 = 8 bits = 0 to 2^8 -1 (0 to 255)
+	const positiveInteger8 uint8 = 255
+	fmt.Println("\tPositive integer that allows store numbers with a size of 8 bits (const positiveInteger8 uint8 = 255):", positiveInteger8)
+	// uint16 = 16 bits = 0 to 2^16 - 1 (0 to 65535)
+	const positiveInteger16 uint16 = 65535
+	fmt.Println("\tPositive integer that allows store numbers with a size of 16 bits (const positiveInteger16 uint16 = 65535):", positiveInteger16)
+	// uint32 = 32 bits = 0 to 2^32 - 1 (0 to 4294967295)
+	const positiveInteger32 uint32 = 4294967295
+	fmt.Println("\tPositive integer that allows store numbers with a size of 32 bits (const positiveInteger32 uint32 = 4294967295):", positiveInteger32)
+	// uint64 = 64 bits = 0 to 2^64 - 1 (0 to 18446744073709551615)
+	const positiveInteger64 uint64 = 18446744073709551615
+	fmt.Println("\tPositive integer that allows store numbers with a size of 64 bits (const positveInteger64 uint64 = 18446744073709551615):", positiveInteger64)
+
+	// Decimal numbers
+	fmt.Println(" Decimal numbers")
+	// float32 = 32 bits = +/- 1.18e^-38 to +/- 3.4e^38
+	const decimal32 float32 = 91827389123891273897123897128397189237.123123123123
+	fmt.Println("\tDecimal number that allows store numbers with size of 32 bits (const decimal32 float32 = 108310167974186771.14911748378442):", decimal32)
+	// float64 = 64 bits = +/- 2.23e^-308 to +/- 1.8e^308
+	const decimal64 float64 = 123123182318923923789127398127398712389712389712389712893712893712893789123789128907128923897128397123889123789123782337891237893789129123237899783212378989123237897891232372378931212312312123123231312312123123231231312312231123233333333333333333333333333333333333333333333333333333333333333333333333333333328.1
+	fmt.Println(("\tDecimal number that allows store numbers with size of 64 bits (const decimal64 float64 = 1231231823...):"), decimal64)
+
+	// Texts and booleans
+	fmt.Println(" Texts and booleans")
+	// Text
+	const text string = ""
+	fmt.Println("\tText (const text string = \"\"):", text)
+	// Boolean
+	const boolean bool = true
+	fmt.Println("\tBoolean (const boolean bool = true):", boolean)
+
+	// Complex numbers
+	fmt.Println(" Complex numbers")
+	// Complex64 = Real or imaginarie float32
+	// Complex128 = Real or imaginarie float64
+	const complexNumbers128 complex128 = 10 + 8i
+	fmt.Println("\tComplex number (const complexNumber128 complex128 = 10 + 8i):", complexNumbers128)
+
 }
