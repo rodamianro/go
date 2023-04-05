@@ -122,16 +122,16 @@ func main() {
 	// int = OS depending (32 o 64)
 	const integer int = 9223372036854775807
 	fmt.Println("\tInteger that has OS depends (const integer int = 9223372036854775807):", integer)
-	// int8 = 8 bits = -2^7 a 2^7 - 1 (-128 a 127)
+	// int8 = 8 bits = -2^7 to 2^7 - 1 (-128 a 127)
 	const integer8 int8 = 127
 	fmt.Println("\tInteger that is equivalent to 8 bits (const integer8 int8 = 127):", integer8)
-	// int16 = 16 bits = -2^15 a 2^15 - 1 (-32768 a 32767)
+	// int16 = 16 bits = -2^15 to 2^15 - 1 (-32768 a 32767)
 	const integer16 int16 = -32768
 	fmt.Println("\tInteger that is equivalent to 16 bits (const integer16 int16 = -32768):", integer16)
-	// int32 = 32 bits = -2^31 a 2^31 - 1 (-2147483648 a 2147483647)
+	// int32 = 32 bits = -2^31 to 2^31 - 1 (-2147483648 a 2147483647)
 	const integer32 int32 = 2147483647
 	fmt.Println("\tInteger that is equivalent to 32 bits (const integer32 int32 = 2147483647):", integer32)
-	// int64 = 64 bits = -2^63 a 2^63 - 1 (-9223372036854775808 a 9223372036854775807)
+	// int64 = 64 bits = -2^63 to 2^63 - 1 (-9223372036854775808 a 9223372036854775807)
 	const integer64 int64 = -9223372036854775808
 	fmt.Println("\tInteger that is equivalent to 64 bits (const integer64 int64 = -9223372036854775808):", integer64)
 
@@ -178,4 +178,36 @@ func main() {
 	const complexNumbers128 complex128 = 10 + 8i
 	fmt.Println("\tComplex number (const complexNumber128 complex128 = 10 + 8i):", complexNumbers128)
 
+	// fmt
+	var helloMessage string = "Hello"
+	var worldMessage string = "world"
+	// Println
+	fmt.Println(helloMessage, worldMessage)
+	// Printf
+	// In this case considers that % has a specific meaning
+	fmt.Printf("%v %v\n", helloMessage, worldMessage)
+	fmt.Println("For more verbs see: https://pkg.go.dev/fmt#hdr-Printing")
+	// Sprintf
+	message := fmt.Sprintf("%v %v", helloMessage, worldMessage)
+	fmt.Println(message)
+	printFunction(message, "world")
+	printFunction(toString(returnValue(2)), "")
+	var value1, value2 int = doubleReturn(2)
+	var value3, _ int = doubleReturn(2)
+	printFunction(toString(value1), toString(value2))
+	printFunction(toString(value3))
 }
+
+func printFunction(message, subject string) {
+	fmt.Println(message, "-", subject)
+}
+
+func returnValue(a int) int {
+	return a * 2
+}
+
+func doubleReturn(a int) (c, d int) {
+	return a * 2, a * 3
+}
+
+func toString(value any) string { return fmt.Sprint(value) }
